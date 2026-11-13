@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2026 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- batt_charge_en always reads back 1, so the toggle must be written
+         unconditionally instead of only when the read value differs. -->
+    <bool name="config_chargingControlToggleSetAlways">true</bool>
+</resources>

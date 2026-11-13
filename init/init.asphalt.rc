@@ -48,7 +48,9 @@ on boot
 # Battery
 on property:sys.boot_completed=1
     chown system system /sys/class/qcom-battery/batt_protect_en
-    chmod 666 /sys/class/qcom-battery/batt_protect_en
+    chmod 0660 /sys/class/qcom-battery/batt_protect_en
+    chown system system /sys/class/qcom-battery/batt_charge_en
+    chmod 0660 /sys/class/qcom-battery/batt_charge_en
 
 #add for online lenovocust
 on post-fs-data

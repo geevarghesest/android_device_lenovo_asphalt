@@ -29,10 +29,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init/init.class_main.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.class_main.sh \
     $(LOCAL_PATH)/init/init.asphalt.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.asphalt.rc
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
+$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/class/qcom-battery/batt_charge_en)
+
 # Overlay
 PRODUCT_PACKAGES += \
     ApertureResAsphalt \
     FrameworkResAsphalt \
+    LineageResAsphalt \
     WifiResTargetAsphalt
 
 # Parts
