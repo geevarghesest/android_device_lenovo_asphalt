@@ -164,4 +164,7 @@
     <!-- Whether the current device's internal display can host desktop sessions.  -->
     <bool name="config_canInternalDisplayHostDesktops">true</bool>
 
+    <!-- Put the device to sleep when the folio cover (lid switch) is closed. -->
+    <bool name="config_lidControlsSleep">true</bool>
+
 </resources>
